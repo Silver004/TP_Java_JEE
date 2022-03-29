@@ -1,6 +1,6 @@
 package com.education.tp5.collections;
 
-public class Client {
+public class Client implements Comparable{
     Integer code;
     String name;
 
@@ -26,5 +26,12 @@ public class Client {
     @Override
     public int hashCode(){
         return code;
+    }
+
+    //Redefine compareTo method in the comparable interface so that we can sort objects using TreeSet
+    @Override
+    public int compareTo(Object o){
+        Client client = (Client) o;
+        return -client.code+this.code;
     }
 }

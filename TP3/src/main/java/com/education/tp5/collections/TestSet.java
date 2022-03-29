@@ -24,12 +24,20 @@ public class TestSet {
         set2.forEach(i-> System.out.println(i));
         System.out.println();
 
-        //create a TreeSet
+        //create a TreeSet, the TreeSet will sort our numbers in this case
         Set<Integer> set3 = new TreeSet<>();
         set3.add(22);
         set3.add(11);
         set3.add(15);
         set3.add(9);
         set3.forEach(i-> System.out.println(i));
+        System.out.println();
+
+        //create a TreeSet of clients
+        Set<Client> set4 = new TreeSet<>();
+        set4.add(new Client(1, "Dennis"));
+        set4.add(new Client(3, "Linus"));
+        set4.add(new Client(2, "Richard"));
+        set4.forEach(i->System.out.println(i));
     }
 }
