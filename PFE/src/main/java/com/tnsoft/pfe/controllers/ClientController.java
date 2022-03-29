@@ -10,7 +10,7 @@ public class ClientController {
     ClientServiceImp clientService = (ClientServiceImp) appContext.getBean("service");
     //this line is grayed because using the inversion of control allow us to prevent hard coding our classes
     //ClientServiceImp clientService = new ClientServiceImp();
-    public Client save(Client c){
+    public boolean save(Client c){
         System.out.println("Client controller level");
         return clientService.save(c);
     }

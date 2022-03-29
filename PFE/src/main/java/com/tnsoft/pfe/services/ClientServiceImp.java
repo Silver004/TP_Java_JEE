@@ -12,7 +12,7 @@ public class ClientServiceImp implements ClientService{
     //ClientRepositoryImp clientRepository = new ClientRepositoryImp();
 
     @Override
-    public Client save(Client c){
+    public boolean save(Client c){
         System.out.println("Service layer : Client service implementation layer");
         return clientRepository.save(c);
     }
