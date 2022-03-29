@@ -2,8 +2,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="controller" class="com.tnsoft.pfe.controllers.ClientController"/>
-    <bean id="service" class="com.tnsoft.pfe.services.ClientServiceImp"/>
-    <bean id="dao" class="com.tnsoft.pfe.repositories.ClientRepositoryImp"/>
+    <bean id="controller" class="com.tnsoft.pfe.controllers.ClientController" scope="prototype"/>
+    <bean id="service" class="com.tnsoft.pfe.services.ClientServiceImp" scope="prototype"/>
+    <bean id="dao" class="com.tnsoft.pfe.repositories.ClientRepositoryImp" scope="prototype"/>
 
 </beans>
