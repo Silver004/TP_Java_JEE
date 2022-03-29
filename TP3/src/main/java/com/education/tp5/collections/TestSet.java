@@ -1,4 +1,5 @@
 package com.education.tp5.collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
@@ -34,10 +35,22 @@ public class TestSet {
         System.out.println();
 
         //create a TreeSet of clients
-        Set<Client> set4 = new TreeSet<>();
+        //Set<Client> set4 = new TreeSet<>();
+        //declaring a comparator will help sort through our client using the code
+        /*
+        Comparator<Client> c = new CodeComparator();
         set4.add(new Client(1, "Dennis"));
         set4.add(new Client(3, "Linus"));
         set4.add(new Client(2, "Richard"));
         set4.forEach(i->System.out.println(i));
+        */
+
+        //this code can be further optimized using lambda expressions
+        //using this line we compare clients using there codes
+        Set<Client> set4 = new TreeSet<>((c1,c2)->c1.code-c2.code);
+        set4.add(new Client(1, "Dennis"));
+        set4.add(new Client(3, "Linus"));
+        set4.add(new Client(2, "Richard"));
+        set4.forEach(i -> System.out.println(i));
     }
 }
